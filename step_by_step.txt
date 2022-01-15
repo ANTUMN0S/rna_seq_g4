@@ -1,0 +1,43 @@
+Step by step instructions for how to run the different scripts.
+Don't forget to change the directories within the scripts to suit your working environment.
+R-Scripts were run on a local machine, so don't forget to transfer the files needed beforehand.
+
+1. Run sra_prefetch.slurm to fetch the .sra-files of the samples of interest
+
+2. Run fastq_dump.slurm to convert the .sra-files to .fastq-files
+
+3. Run renamer.sh to rename the .fastq-files to names that make them easier to identify
+
+4. Run fastqc1.slurm to perform quality control
+
+5. Download all the files listed in where_to_get_files.txt
+
+6. Run concatenator.sh to concatenate the three fasta-file for the undesired rna (note that they might be in different file formats and need to be changed
+
+7. Run rna_indexing.slurm to prepare the indices for the undesired rna
+
+8. Run genome_indexing.slurm to prepare the indices for the genome
+
+9. Run cutadapt.slurm to clip and trim the polysome files
+
+10. Run fastqc2.slurm to check how the dataquality changed
+
+11. Run map_undesired.slurm to map the reads of the undesired RNA the polysome files (this discards everything that did map)
+
+12. Run map_genome.slurm to map the files from the previous step to the genome
+
+13. Run sorter.slurm to convert the SAM files to sorted BAM files
+
+14. Run 2bit.slurm to convert the genome FASTA file to a 2bit file
+
+15. Run RiboseQC.R for quality control
+
+16. Run countTable.slurm to generate a raw read counts table for each gene and sample
+
+17. Run biotype.slurm to create a table containing all the biotypes
+
+18. Run biotype.R to create the RPF_biotypes.pdf file
+
+19. Run volcano.R to perform differential expression analysis
+
+20. Run gene_ontology.R to perform gene ontology analysis and determine the biological relevance of differentially expressed genes

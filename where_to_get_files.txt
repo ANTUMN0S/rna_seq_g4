@@ -1,0 +1,42 @@
+Undesired RNA annotation:
+- rRNA, snRNA, snoRNA are fetched from https://www.ensembl.org/biomart/martview :
+
+	Database: Ensembl Genes 104
+	Dataset: Rat genes (Rnor_6.0)
+	Click “Filters”
+	Expand the “Gene” tab
+	Select Transcript type: rRNA, snRNA, snoRNA
+	Click “Attributes”
+	Select “Sequences” (Radio button) and expand the “Sequences” tab
+	Select “Unspliced (gene)”
+	Expand the “Header information” tab
+	Select “Gene stable ID”
+	Click “Count”
+	Click “Results”
+	Download the FASTA file
+
+
+- tRNA is fetched from http://gtrnadb.ucsc.edu/cgi-bin/trna_chooseorg?org=Rattus+norvegicus :
+	
+	Select “Rattus norvegicus (Rat Nov. 2020 mRatBN7.2/rn7)”
+	On the left hand side, select “tRNA Sequences and Transcript Mapping”
+	Download “High confidence tRNA sequences: rn7-tRNAs.fa”
+
+- 45S, 28S, 18S, 5.8S, 5S rRNA is fetched from https://www.ncbi.nlm.nih.gov/nuccore/?term=biomol_rRNA%5Bprop%5D+AND+%22Rattus+norvegicus%22%5BOrganism%5D :
+
+	On the top right, click “Send to”
+	Select “File”
+	Select Format: FASTA
+	Click “Create File”
+
+
+Genome annotation:
+- DNA is fetched from http://ftp.ensembl.org/pub/release-104/fasta/rattus_norvegicus/dna/ :
+	
+	The file you are interested in will be named “Rattus_norvegicus.Rnor_6.0.dna.toplevel.fa.gz”
+
+- The gtf-file is fetched from http://ftp.ensembl.org/pub/release-104/gtf/rattus_norvegicus/ :
+	
+	The file you are interested in will be name "Rattus_norvegicus.Rnor_6.0.104.chr.gtf.gz"
+
+

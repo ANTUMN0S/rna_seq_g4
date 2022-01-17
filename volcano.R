@@ -19,6 +19,7 @@ register(SnowParam(6)) # Change this based on your computer core count
 qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
 mycols = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
 
+# Prepare variables for the data
 sample_1 <- "Neuropil_Poly"
 sample_2 <- "Somata_Poly"
 no_of_reps <- 3

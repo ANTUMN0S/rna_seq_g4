@@ -16,8 +16,8 @@ library("RiboseQC")
 
 # Prepare genome file (to be done only once!!!)
 prepare_annotation_files(annotation_directory = ".",
-                         twobit_file = "C:/Users/Antumnos/Desktop/rnaseq/Rattus_norvegicus.mRatBN7.2.dna.toplevel.2bit",
-                         gtf_file = "C:/Users/Antumnos/Desktop/rnaseq/Rattus_norvegicus.mRatBN7.2.105.gtf",
+                         twobit_file = "C:/Users/Antumnos/Desktop/Rattus_norvegicus.Rnor_6.0.dna.toplevel.2bit",
+                         gtf_file = "C:/Users/Antumnos/Desktop/rnaseq/Rattus_norvegicus.Rnor_6.0.104.gtf",
                          scientific_name = "Rattus.norvegicus",
                          annotation_name = "mRatBN7.2",
                          export_bed_tables_TxDb = F,

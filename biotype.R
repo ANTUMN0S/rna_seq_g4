@@ -12,7 +12,7 @@ Color = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pal
 
 data <- read.table(file = "biotype_counts_processed.txt", sep = "\t", header = TRUE)
 
-# Rearrange data so that it matches the next step
+# Rearrange data so that it matches the next step, only necessary if you don't use the processed file.
 # data <- data[ , c(1, 5, 6, 7, 2, 3, 4, 8:16)]
 
 colnames(data) <- c("Biotype",
